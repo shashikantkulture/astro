@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;

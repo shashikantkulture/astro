@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from 'react';
 
 export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export default async function Services() {
     const categories = await prisma.consultationCategory.findMany({
