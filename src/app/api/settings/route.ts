@@ -11,7 +11,7 @@ export async function GET() {
             settings = await prisma.settings.create({
                 data: {
                     id: "global",
-                    whatsappNumber: "1234567890",
+                    whatsappNumber: "7376916925",
                     metaTitle: "Mystic Tarot | Tarot Consultations",
                     metaDescription: "Experience profound spiritual clarity and guidance through our premium intuitive tarot readings.",
                 }
@@ -39,7 +39,7 @@ export async function PUT(req: Request) {
             },
             create: {
                 id: "global",
-                whatsappNumber: whatsappNumber || "1234567890",
+                whatsappNumber: whatsappNumber || "7376916925",
                 metaTitle: metaTitle || "Mystic Tarot | Tarot Consultations",
                 metaDescription: metaDescription || "Experience profound spiritual clarity and guidance through our premium intuitive tarot readings.",
             }

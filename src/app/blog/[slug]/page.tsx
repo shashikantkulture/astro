@@ -80,7 +80,7 @@ export default async function BlogPostDetails({ params }: { params: Promise<{ sl
                 <div className="mt-20 pt-10 border-t border-primary/20 text-center">
                     <p className="font-serif text-2xl text-white mb-6">Seek deeper clarity?</p>
                     <a
-                        href="https://wa.me/1234567890?text=Hi,%20I%20just%20read%20your%20blog%20post%20and%20want%20to%20book%20a%20consultation."
+                        href="https://wa.me/7376916925?text=Hi,%20I%20just%20read%20your%20blog%20post%20and%20want%20to%20book%20a%20consultation."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-[#8A2BE2] px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_20px_rgba(75,0,130,0.6)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(138,43,226,0.8)]"

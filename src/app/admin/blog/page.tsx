@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Plus, Edit, Trash2 } from "lucide-react";
-import { BlogPost } from "@prisma/client";
+import { BlogPost } from "@/lib/db";
 
 export default function BlogAdmin() {
     const [posts, setPosts] = useState<BlogPost[]>([]);

@@ -87,7 +87,7 @@ export default function SettingsAdmin() {
                     <div className="space-y-4 max-w-xl">
                         <div>
                             <label className="block text-sm font-medium text-lavender-dark mb-1">WhatsApp Number</label>
-                            <p className="text-xs text-lavender-dark/70 mb-2">Include country code without the + sign. Example: 1234567890</p>
+                            <p className="text-xs text-lavender-dark/70 mb-2">Include country code without the + sign. Example: 7376916925</p>
                             <input
                                 type="text"
                                 required

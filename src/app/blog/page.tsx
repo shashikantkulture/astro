@@ -30,7 +30,7 @@ export default async function BlogArchive() {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {posts.map((post) => (
+                        {posts.map((post: any) => (
                             <article key={post.id} className="group relative rounded-2xl border border-primary/30 bg-background/60 overflow-hidden backdrop-blur-md transition-all hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(75,0,130,0.5)] flex flex-col h-full">
                                 <Link href={`/blog/${post.slug}`} className="absolute inset-0 z-10">
                                     <span className="sr-only">Read {post.title}</span>

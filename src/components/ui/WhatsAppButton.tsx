@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function WhatsAppButton({ whatsappNumber = "1234567890" }: { whatsappNumber?: string }) {
+export function WhatsAppButton({ whatsappNumber = "7376916925" }: { whatsappNumber?: string }) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {

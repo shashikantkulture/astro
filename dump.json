@@ -1,0 +1,102 @@
+{
+  "settings": [
+    {
+      "id": "global",
+      "whatsappNumber": "7376916925",
+      "metaTitle": "Mystic Tarot | Tarot Consultations",
+      "metaDescription": "Experience profound spiritual clarity and guidance through our premium intuitive tarot readings.",
+      "updatedAt": "2026-03-28T10:05:03.753Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "name": "Guidance Consultation Charges",
+      "description": "Apne jeevan ki disha samajhne aur sakaratmak nirnay lene ke liye margdarshan prapt karein.",
+      "order": 1,
+      "updatedAt": "2026-03-06T07:56:47.872Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "602004ec-31e1-42d7-bf47-22bd77fde09e",
+      "title": "Vedic Jyotish Consultation",
+      "price": "₹700",
+      "duration": "30–40 Min",
+      "description": "Vedic astrology ke madhyam se apne grahon aur nakshatron ka vyapak vishleshan.",
+      "popular": false,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 1,
+      "updatedAt": "2026-03-06T07:56:47.885Z"
+    },
+    {
+      "id": "4b5bc5d8-00e7-4af0-929b-5d544be659d5",
+      "title": "Numerology (Ank Jyotish)",
+      "price": "₹500",
+      "duration": "20–25 Min",
+      "description": "Aapke janm tithi aur naam ke aadhar par ank jyotish dwara margdarshan.",
+      "popular": false,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 2,
+      "updatedAt": "2026-03-06T07:56:47.893Z"
+    },
+    {
+      "id": "795e7c0d-718a-4e0f-acd6-4e77047ddaea",
+      "title": "Tarot Reading",
+      "price": "₹500",
+      "duration": "20 Min",
+      "description": "Tarot cards ke madhyam se aapke vartamaan aur bhavishya ki urjaon ka aakalan.",
+      "popular": false,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 3,
+      "updatedAt": "2026-03-06T07:56:47.904Z"
+    },
+    {
+      "id": "a264d752-16a1-4b70-9314-5547ebbee685",
+      "title": "Hand Reading",
+      "price": "₹600",
+      "duration": "25 Min",
+      "description": "Hast rekha vigyan dwara aapke vyaktitva aur sambhavnaon ki jankari.",
+      "popular": false,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 4,
+      "updatedAt": "2026-03-06T07:56:47.918Z"
+    },
+    {
+      "id": "dc1a5def-f109-4136-b1c1-0dc903c763c4",
+      "title": "Face Reading",
+      "price": "₹600",
+      "duration": "25 Min",
+      "description": "Chehre ki banao aur lakshanon ke aadhar par aantarik svabhav ka adhyayan.",
+      "popular": false,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 5,
+      "updatedAt": "2026-03-06T07:56:47.926Z"
+    },
+    {
+      "id": "ea6d7aa4-ac5b-4a8a-8db1-84f0cf565d4d",
+      "title": "Detailed Life Guidance (All Combined)",
+      "price": "₹1,200",
+      "duration": "45–60 Min",
+      "description": "Sabhi vidhaon ka upyog karke aapke jeevan ka sampurna aur samagra margdarshan.",
+      "popular": true,
+      "categoryId": "9e11ead8-7f4a-45fc-97f8-f0444f8ba7ba",
+      "order": 6,
+      "updatedAt": "2026-03-06T07:56:47.934Z"
+    }
+  ],
+  "tarotCards": [],
+  "blogPosts": [
+    {
+      "id": "f0e6c0e4-38d4-469d-b324-ee8068810743",
+      "title": "मेरी नौकरी कब लगेगी? ज्योतिष से कैसे जानें",
+      "slug": "meri-naukri-kab-lagegi",
+      "excerpt": "ज्योतिष के अनुसार नौकरी में सफलता और देरी के कारण जानें। सही दिशा मिलने से संघर्ष कम होता है।",
+      "content": "\n    <p>आज सबसे बड़ा प्रश्न यही है —<br>\n    <strong>मेरी नौकरी कब लगेगी?</strong><br>\n    बहुत प्रयास करने के बाद भी जब सफलता नहीं मिलती,<br>\n    तो इसका कारण केवल मेहनत की कमी नहीं होता।<br>\n    कई बार समय (दशा), ग्रह स्थिति और निर्णय का समय सही नहीं होता।</p>\n    \n    <h3>🔮 ज्योतिष नौकरी के बारे में क्या बताता है?</h3>\n    <p>ज्योतिष में नौकरी का संबंध मुख्य रूप से इनसे देखा जाता है:</p>\n    <ul>\n      <li>दशम भाव (Career House)</li>\n      <li>शनि ग्रह (कर्म और स्थिरता)</li>\n      <li>बुध ग्रह (बुद्धि और कार्य क्षमता)</li>\n      <li>वर्तमान दशा और गोचर</li>\n    </ul>\n    <p>जब ये अनुकूल होते हैं,<br>\n    तब अचानक अवसर मिलने लगते हैं।</p>\n    \n    <h3>⏳ देरी क्यों होती है?</h3>\n    <p>नौकरी में देरी के मुख्य कारण:</p>\n    <ul>\n      <li>✔ सही समय से पहले प्रयास</li>\n      <li>✔ शनि का परीक्षा काल</li>\n      <li>✔ दिशा स्पष्ट न होना</li>\n      <li>✔ गलत क्षेत्र का चयन</li>\n      <li>✔ निर्णय में अस्थिरता</li>\n    </ul>\n    \n    <h3>🌟 सही समय पहचानना क्यों जरूरी है?</h3>\n    <p>ज्योतिष यह नहीं कहता कि कुछ न करें,<br>\n    बल्कि यह बताता है:<br>\n    कब प्रयास करें ताकि परिणाम मिले।<br>\n    सही समय पर किया गया प्रयास<br>\n    कम मेहनत में भी सफलता दिला सकता है।</p>\n    \n    <h3>📿 क्या ज्योतिष नौकरी दिला सकता है?</h3>\n    <p>ज्योतिष नौकरी नहीं देता,<br>\n    लेकिन यह बताता है:</p>\n    <ul>\n      <li>कौन सा क्षेत्र आपके लिए सही है</li>\n      <li>कब अवसर मिलेगा</li>\n      <li>कब बदलाव करना चाहिए</li>\n      <li>कहाँ रुकना चाहिए, कहाँ आगे बढ़ना चाहिए</li>\n    </ul>\n    <p>यही सही दिशा सफलता लाती है।</p>\n    \n    <h3>📅 यदि आप भी जानना चाहते हैं:</h3>\n    <ul>\n      <li>नौकरी कब मिलेगी</li>\n      <li>कौन सा क्षेत्र सही है</li>\n      <li>प्रयास कब करें</li>\n      <li>रुकावट क्यों आ रही है</li>\n    </ul>\n    <p>तो व्यक्तिगत कुंडली विश्लेषण द्वारा स्पष्ट मार्गदर्शन लिया जा सकता है।<br>\n    सही दिशा मिल जाए, तो संघर्ष कम हो जाता है।</p>\n    \n    <p class=\"mt-8 font-bold text-gold\">Consultation Booking Available on WhatsApp</p>\n  ",
+      "imageUrl": null,
+      "published": true,
+      "createdAt": "2026-03-06T07:45:36.948Z",
+      "updatedAt": "2026-03-06T07:45:36.948Z"
+    }
+  ]
+}

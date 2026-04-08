@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
-import { Particles } from "@/components/ui/Particles";
+import { TwinklingStars } from "@/components/ui/TwinklingStars";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { prisma } from "@/lib/db";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -40,7 +41,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let whatsappNumber = "1234567890";
+  let whatsappNumber = "7376916925";
   try {
     const settings = await prisma.settings.findUnique({ where: { id: "global" } });
     if (settings?.whatsappNumber) {
@@ -55,13 +56,15 @@ export default async function RootLayout({
       <body
         className={`${playfair.variable} ${poppins.variable} font-sans antialiased selection:bg-primary selection:text-white`}
       >
-        <Particles count={40} />
-        <div className="relative z-10 flex min-h-screen flex-col">
-          <Navbar whatsappNumber={whatsappNumber} />
-          <main className="flex-grow pt-16">{children}</main>
-          <Footer />
-        </div>
-        <WhatsAppButton whatsappNumber={whatsappNumber} />
+        <LanguageProvider>
+          <TwinklingStars count={150} />
+          <div className="relative z-10 flex min-h-screen flex-col">
+            <Navbar whatsappNumber={whatsappNumber} />
+            <main className="flex-grow pt-16">{children}</main>
+            <Footer />
+          </div>
+          <WhatsAppButton whatsappNumber={whatsappNumber} />
+        </LanguageProvider>
       </body>
     </html>
   );

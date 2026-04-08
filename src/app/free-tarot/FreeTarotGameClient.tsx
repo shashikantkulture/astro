@@ -5,21 +5,23 @@ import { motion } from "framer-motion";
 import { TarotCard } from "@/components/ui/TarotCard";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
-import { TarotCard as DBTarotCard } from "@prisma/client";
+import { TarotCard as DBTarotCard } from "@/lib/db";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function FreeTarotGameClient({ initialCards }: { initialCards: DBTarotCard[] }) {
+    const { t } = useLanguage();
     const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
 
     const fallbackCards = [
         {
-            id: "game-1", cardId: "magician", name: "Jadugar (The Magician)",
+            id: "game-1", cardId: "magician", name: t("freeTarot.fallbackName1"),
             imageUrl: "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?auto=format&fit=crop&q=80",
-            description: "Karwayi, shakti aur abhivyakti. Aapke paas apne lakshyon aur icchaon ko prapt karne ke liye aavashyak upkaran hain.", updatedAt: new Date()
+            description: t("freeTarot.fallbackDesc1"), updatedAt: new Date()
         },
         ...Array.from({ length: 5 }).map((_, i) => ({
-            id: `fb-${i}`, cardId: `fb-${i}`, name: "Agyat Urja (Unknown Energy)",
+            id: `fb-${i}`, cardId: `fb-${i}`, name: t("freeTarot.fallbackName2"),
             imageUrl: "https://images.unsplash.com/photo-1549487955-4424619ad420?auto=format&fit=crop&q=80",
-            description: "Brahmand rahasyamay hai.", updatedAt: new Date()
+            description: t("freeTarot.fallbackDesc2"), updatedAt: new Date()
         }))
     ];
 
@@ -48,11 +50,11 @@ export default function FreeTarotGameClient({ initialCards }: { initialCards: DB
                     >
                         <div className="inline-flex items-center space-x-2 rounded-full border border-gold/40 bg-primary/20 px-4 py-1.5 backdrop-blur-sm mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
                             <Sparkles className="h-4 w-4 text-gold" />
-                            <span className="text-sm font-medium text-gold tracking-wide uppercase">Muft Dainik Margdarshan</span>
+                            <span className="text-sm font-medium text-gold tracking-wide uppercase">{t("freeTarot.badge")}</span>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">Brahmand se Poochein</h1>
+                        <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">{t("freeTarot.title")}</h1>
                         <p className="text-lg text-lavender-dark leading-relaxed">
-                            Apni aankhein band karein, apne dimag ko saaf karein aur ek prashn poochein. Jab aap taiyaar mehsoos karein, toh apni aankhein kholein aur apne antargyan ko sahi card tak aapka margdarshan karne dein.
+                            {t("freeTarot.desc")}
                         </p>
                     </motion.div>
                 </div>
@@ -93,7 +95,7 @@ export default function FreeTarotGameClient({ initialCards }: { initialCards: DB
                                                 href="/services"
                                                 className="shadow-[0_0_20px_rgba(212,175,55,0.6)] font-semibold px-4 py-2 text-sm sm:px-6 sm:py-2.5 rounded-full bg-gold text-[#4B0082] transition-transform hover:scale-105"
                                             >
-                                                Poora Arth Dekhein
+                                                {t("freeTarot.btnFull")}
                                             </Link>
                                         </motion.div>
                                     )}
@@ -114,7 +116,7 @@ export default function FreeTarotGameClient({ initialCards }: { initialCards: DB
                                 onClick={handleReset}
                                 className="text-lavender hover:text-gold transition-colors font-medium border-b border-dashed border-lavender/40 hover:border-gold pb-1"
                             >
-                                दूसरा कार्ड चुनें
+                                {t("freeTarot.btnReset")}
                             </button>
                         </motion.div>
                     )}

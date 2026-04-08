@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Plus, Edit, Trash2, X, Save } from "lucide-react";
-import { TarotCard } from "@prisma/client";
+import { TarotCard } from "@/lib/db";
 
 export default function TarotAdmin() {
     const [cards, setCards] = useState<TarotCard[]>([]);

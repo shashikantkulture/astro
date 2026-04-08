@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Contact() {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -14,8 +16,7 @@ export default function Contact() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulate form submission
-        alert("Sandesh bheja gaya! (Simulation)");
+        alert(t("contact.alertMsg"));
     };
 
     return (
@@ -30,9 +31,9 @@ export default function Contact() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">Brahmand se Judein</h1>
+                        <h1 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">{t("contact.heroTitle")}</h1>
                         <p className="text-lg text-lavender-dark">
-                            Kya aapke paas reading ke baare mein koi prashn hain, ya custom adhyatmik margdarshan ke baare mein poochhtachh karna chahte hain? Main yahan madad karne ke liye hoon.
+                            {t("contact.heroDesc")}
                         </p>
                     </motion.div>
                 </div>
@@ -47,7 +48,7 @@ export default function Contact() {
                         className="space-y-8"
                     >
                         <div className="rounded-2xl border border-primary/30 bg-primary/5 p-8 backdrop-blur-sm shadow-xl">
-                            <h3 className="font-serif text-2xl font-semibold text-white mb-8 border-b border-primary/30 pb-4">Seedhe Channel</h3>
+                            <h3 className="font-serif text-2xl font-semibold text-white mb-8 border-b border-primary/30 pb-4">{t("contact.directTitle")}</h3>
 
                             <div className="space-y-8">
                                 <div className="flex items-start">
@@ -55,9 +56,9 @@ export default function Contact() {
                                         <MessageCircle className="h-6 w-6" />
                                     </div>
                                     <div className="ml-6">
-                                        <h4 className="text-lg font-medium text-white mb-1">WhatsApp Sandesh</h4>
-                                        <p className="text-lavender-dark mb-2">Paramarsh booking ke liye mujh tak pahunchne ka sabse tez tarika.</p>
-                                        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors font-semibold">
+                                        <h4 className="text-lg font-medium text-white mb-1">{t("contact.waTitle")}</h4>
+                                        <p className="text-lavender-dark mb-2">{t("contact.waDesc")}</p>
+                                        <a href="https://wa.me/7376916925" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors font-semibold">
                                             +1 (234) 567-890
                                         </a>
                                     </div>
@@ -68,8 +69,8 @@ export default function Contact() {
                                         <Mail className="h-6 w-6" />
                                     </div>
                                     <div className="ml-6">
-                                        <h4 className="text-lg font-medium text-white mb-1">Email Poochhtachh</h4>
-                                        <p className="text-lavender-dark mb-2">Vyavsayik sahyog ya vistrit prashnon ke liye.</p>
+                                        <h4 className="text-lg font-medium text-white mb-1">{t("contact.emailTitle")}</h4>
+                                        <p className="text-lavender-dark mb-2">{t("contact.emailDesc")}</p>
                                         <a href="mailto:hello@mystictarot.com" className="text-gold hover:text-gold-light transition-colors font-semibold">
                                             hello@mystictarot.com
                                         </a>
@@ -81,10 +82,10 @@ export default function Contact() {
                                         <MapPin className="h-6 w-6" />
                                     </div>
                                     <div className="ml-6">
-                                        <h4 className="text-lg font-medium text-white mb-1">Sthan</h4>
-                                        <p className="text-lavender-dark mb-2">Bhautik kshetra mein aadharit, alaukik vimanon ke madhyam se duniya bhar mein judna.</p>
+                                        <h4 className="text-lg font-medium text-white mb-1">{t("contact.locTitle")}</h4>
+                                        <p className="text-lavender-dark mb-2">{t("contact.locDesc")}</p>
                                         <span className="text-lavender font-semibold">
-                                            Vishwa star par aabhasi paramarsh
+                                            {t("contact.locNote")}
                                         </span>
                                     </div>
                                 </div>
@@ -94,9 +95,9 @@ export default function Contact() {
                         {/* Social Proof Mini */}
                         <div className="rounded-2xl border border-gold/20 bg-background/60 p-6 backdrop-blur-md">
                             <p className="text-sm text-lavender-dark italic">
-                                "AstroHemani ko dhoondhna mere margdarshan ke liye brahmand ka uttar dene ka tarika tha. Har batchit ke baad mujhe jo shanti mehsoos hoti hai vah advitiya hai."
+                                {t("contact.quoteText")}
                             </p>
-                            <p className="mt-2 text-gold font-semibold text-xs text-right">— J. Doe</p>
+                            <p className="mt-2 text-gold font-semibold text-xs text-right">{t("contact.quoteAuthor")}</p>
                         </div>
                     </motion.div>
 
@@ -113,11 +114,11 @@ export default function Contact() {
                             <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold/40 rounded-bl-2xl"></div>
                             <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold/40 rounded-br-2xl"></div>
 
-                            <h2 className="font-serif text-3xl font-semibold text-white mb-8 border-b border-primary/20 pb-4">Ek Sandesh Bhejein</h2>
+                            <h2 className="font-serif text-3xl font-semibold text-white mb-8 border-b border-primary/20 pb-4">{t("contact.formTitle")}</h2>
 
                             <div className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-lavender-dark mb-2">Aapka Naam</label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-lavender-dark mb-2">{t("contact.formName")}</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -125,12 +126,12 @@ export default function Contact() {
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         className="w-full bg-background/50 border border-primary/40 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent transition-all"
-                                        placeholder="Apna poora naam darj karein"
+                                        placeholder={t("contact.formNamePlace")}
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-lavender-dark mb-2">Email Pata</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-lavender-dark mb-2">{t("contact.formEmail")}</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -138,27 +139,27 @@ export default function Contact() {
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         className="w-full bg-background/50 border border-primary/40 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent transition-all"
-                                        placeholder="Mujhe kahan uttar dena chahiye?"
+                                        placeholder={t("contact.formEmailPlace")}
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-medium text-lavender-dark mb-2">Vishay</label>
+                                    <label htmlFor="subject" className="block text-sm font-medium text-lavender-dark mb-2">{t("contact.formSubject")}</label>
                                     <select
                                         id="subject"
                                         value={formData.subject}
                                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                         className="w-full bg-background/50 border border-primary/40 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent transition-all"
                                     >
-                                        <option value="" disabled className="text-gray-500">Ek vikalp chunein...</option>
-                                        <option value="booking">Paramarsh Poochhtachh</option>
-                                        <option value="media">Media aur Press</option>
-                                        <option value="general">Samanya Prashn</option>
+                                        <option value="" disabled className="text-gray-500">{t("contact.formSubjDefault")}</option>
+                                        <option value="booking">{t("contact.formSubjOpt1")}</option>
+                                        <option value="media">{t("contact.formSubjOpt2")}</option>
+                                        <option value="general">{t("contact.formSubjOpt3")}</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-lavender-dark mb-2">Aapka Sandesh</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-lavender-dark mb-2">{t("contact.formMsg")}</label>
                                     <textarea
                                         id="message"
                                         required
@@ -166,7 +167,7 @@ export default function Contact() {
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         className="w-full bg-background/50 border border-primary/40 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-transparent transition-all resize-none"
-                                        placeholder="Brahmand aaj aapki kaise sahayata kar sakta hai?"
+                                        placeholder={t("contact.formMsgPlace")}
                                     />
                                 </div>
 
@@ -174,7 +175,7 @@ export default function Contact() {
                                     type="submit"
                                     className="w-full flex items-center justify-center rounded-lg bg-gradient-to-r from-primary to-[#8A2BE2] px-8 py-4 text-base font-semibold text-white shadow-[0_0_20px_rgba(75,0,130,0.4)] transition-all hover:shadow-[0_0_30px_rgba(138,43,226,0.6)] group"
                                 >
-                                    Brahmand ko Bhejein
+                                    {t("contact.formBtn")}
                                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </button>
                             </div>

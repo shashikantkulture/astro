@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-export function Navbar({ whatsappNumber = "1234567890" }: { whatsappNumber?: string }) {
+export function Navbar({ whatsappNumber = "7376916925" }: { whatsappNumber?: string }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { t, toggleLanguage } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,11 +19,11 @@ export function Navbar({ whatsappNumber = "1234567890" }: { whatsappNumber?: str
     }, []);
 
     const navLinks = [
-        { name: "Home", href: "/" },
-        { name: "Mere Baare Mein", href: "/about" },
-        { name: "Services", href: "/services" },
-        { name: "Free Tarot", href: "/free-tarot" },
-        { name: "Blog", href: "/blog" },
+        { name: t("nav.home"), href: "/" },
+        { name: t("nav.about"), href: "/about" },
+        { name: t("nav.services"), href: "/services" },
+        { name: t("nav.freeTarot"), href: "/free-tarot" },
+        { name: t("nav.blog"), href: "/blog" },
     ];
 
     return (
@@ -52,19 +54,31 @@ export function Navbar({ whatsappNumber = "1234567890" }: { whatsappNumber?: str
                                     {link.name}
                                 </Link>
                             ))}
+                            <button
+                                onClick={toggleLanguage}
+                                className="font-sans text-sm font-bold text-gold hover:text-white transition-colors uppercase bg-primary/20 px-3 py-1 rounded-full border border-gold/30"
+                            >
+                                {t("nav.toggle")}
+                            </button>
                             <a
                                 href={`https://wa.me/${whatsappNumber}?text=Namaste,%20main%20consultation%20book%20karna%20chahta/chahti%20hoon.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-primary-light hover:shadow-[0_0_15px_rgba(106,13,173,0.5)]"
                             >
-                                Consultation Book Karein
+                                {t("nav.bookConsultation")}
                             </a>
                         </div>
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="flex md:hidden">
+                    <div className="flex md:hidden items-center gap-4">
+                        <button
+                            onClick={toggleLanguage}
+                            className="font-sans text-xs font-bold text-gold hover:text-white transition-colors uppercase bg-primary/20 px-3 py-1.5 rounded-full border border-gold/30"
+                        >
+                            {t("nav.toggle")}
+                        </button>
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:text-gold focus:outline-none"
@@ -99,7 +113,7 @@ export function Navbar({ whatsappNumber = "1234567890" }: { whatsappNumber?: str
                             rel="noopener noreferrer"
                             className="mt-4 block rounded-md bg-primary px-3 py-2 text-center text-base font-medium text-white hover:bg-primary-light"
                         >
-                            Consultation Book Karein
+                            {t("nav.bookConsultation")}
                         </a>
                     </div>
                 </div>

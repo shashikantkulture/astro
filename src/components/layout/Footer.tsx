@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Twitter, Instagram, Facebook, Mail } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function Footer() {
+    const { t } = useLanguage();
+
     return (
         <footer className="relative z-10 mt-auto border-t border-primary/20 bg-background/80 pt-16 backdrop-blur-md">
             <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
@@ -13,9 +18,9 @@ export function Footer() {
                             Astro<span className="text-gold">Hemani</span>
                         </Link>
                         <p className="mt-4 text-sm text-lavender-dark leading-relaxed">
-                            AstroHemani द्वारा वैदिक ज्योतिष, अंक ज्योतिष, टैरो रीडिंग, हस्त रेखा एवं फेस रीडिंग के माध्यम से व्यक्तिगत जीवन मार्गदर्शन प्रदान किया जाता है।<br /><br />
-                            हमारा उद्देश्य व्यक्ति को स्वयं को समझने, सही निर्णय लेने और जीवन में संतुलन प्राप्त करने में सहायता करना है।<br /><br />
-                            <span className="text-lavender italic">Guidance Based on Traditional Astrology & Numerology Principles.</span>
+                            {t("footer.desc1")}<br /><br />
+                            {t("footer.desc2")}<br /><br />
+                            <span className="text-lavender italic">{t("footer.desc3")}</span>
                         </p>
                         <div className="mt-6 flex space-x-4">
                             <a href="#" className="text-lavender-dark transition-colors hover:text-gold">
@@ -40,58 +45,58 @@ export function Footer() {
                     {/* Disclaimer */}
                     <div className="lg:col-span-3">
                         <h3 className="font-serif text-lg font-semibold text-foreground flex items-center gap-2">
-                            <span>⚖️</span> Disclaimer
+                            <span>⚖️</span> {t("footer.disclaimer")}
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm text-lavender-dark">
-                            <li>यह सेवाएँ आध्यात्मिक एवं वैदिक मार्गदर्शन पर आधारित हैं।</li>
-                            <li>यह किसी प्रकार की मेडिकल, कानूनी या वित्तीय सलाह का विकल्प नहीं हैं।</li>
-                            <li>Consultation का उद्देश्य व्यक्ति को जीवन की दिशा समझने और सकारात्मक निर्णय लेने में सहायता प्रदान करना है।</li>
-                            <li>परिणाम व्यक्ति के कर्म, परिस्थितियों और निर्णयों पर भी निर्भर करते हैं।</li>
+                            <li>{t("footer.disclaimer1")}</li>
+                            <li>{t("footer.disclaimer2")}</li>
+                            <li>{t("footer.disclaimer3")}</li>
+                            <li>{t("footer.disclaimer4")}</li>
                         </ul>
                     </div>
 
                     {/* Appointment Policy */}
                     <div className="lg:col-span-3">
                         <h3 className="font-serif text-lg font-semibold text-foreground flex items-center gap-2">
-                            <span>📞</span> Appointment Policy
+                            <span>📞</span> {t("footer.appointment")}
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm text-lavender-dark">
-                            <li>Consultation केवल Appointment द्वारा किया जाता है।</li>
-                            <li>Booking Confirm होने के बाद ही समय निर्धारित किया जाता है।</li>
-                            <li>Fees Advance में Booking के समय ली जाती है।</li>
+                            <li>{t("footer.appointment1")}</li>
+                            <li>{t("footer.appointment2")}</li>
+                            <li>{t("footer.appointment3")}</li>
                         </ul>
                     </div>
 
                     {/* Privacy Note & Quick Links */}
                     <div className="lg:col-span-2">
                         <h3 className="font-serif text-lg font-semibold text-foreground flex items-center gap-2">
-                            <span>🔒</span> Privacy Note
+                            <span>🔒</span> {t("footer.privacy")}
                         </h3>
                         <ul className="mt-4 space-y-3 text-sm text-lavender-dark">
-                            <li>आपकी दी गई सभी जानकारी पूर्णतः गोपनीय रखी जाती है।</li>
-                            <li>किसी भी प्रकार का Personal Data किसी Third Party के साथ साझा नहीं किया जाता।</li>
+                            <li>{t("footer.privacy1")}</li>
+                            <li>{t("footer.privacy2")}</li>
                         </ul>
 
-                        <h3 className="font-serif text-lg font-semibold text-foreground mt-8">Quick Links</h3>
+                        <h3 className="font-serif text-lg font-semibold text-foreground mt-8">{t("footer.quickLinks")}</h3>
                         <ul className="mt-4 space-y-2 text-sm text-lavender-dark">
                             <li>
-                                <Link href="/about" className="transition-colors hover:text-gold">Mere Baare Mein</Link>
+                                <Link href="/about" className="transition-colors hover:text-gold">{t("footer.linkAbout")}</Link>
                             </li>
                             <li>
-                                <Link href="/services" className="transition-colors hover:text-gold">Consultation Services</Link>
+                                <Link href="/services" className="transition-colors hover:text-gold">{t("footer.linkServices")}</Link>
                             </li>
                             <li>
-                                <Link href="/free-tarot" className="transition-colors hover:text-gold">Free Tarot Reading</Link>
+                                <Link href="/free-tarot" className="transition-colors hover:text-gold">{t("footer.linkTarot")}</Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="transition-colors hover:text-gold">Contact Us</Link>
+                                <Link href="/contact" className="transition-colors hover:text-gold">{t("footer.linkContact")}</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="mt-16 border-t border-primary/20 pt-8 text-center text-sm text-lavender-dark flex flex-col items-center justify-center gap-2">
-                    <p>© AstroHemani. All Rights Reserved.</p>
+                    <p>{t("footer.copyright")}</p>
                 </div>
             </div>
         </footer>
